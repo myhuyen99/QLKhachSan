@@ -1,0 +1,50 @@
+@model QLKhachSan.Models.Giaphong
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Giaphong</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="GpMa" class="control-label"></label>
+                <input asp-for="GpMa" class="form-control" />
+                <span asp-validation-for="GpMa" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GpTheongay" class="control-label"></label>
+                <input asp-for="GpTheongay" class="form-control" />
+                <span asp-validation-for="GpTheongay" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GpTheotuan" class="control-label"></label>
+                <input asp-for="GpTheotuan" class="form-control" />
+                <span asp-validation-for="GpTheotuan" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GpTheothang" class="control-label"></label>
+                <input asp-for="GpTheothang" class="form-control" />
+                <span asp-validation-for="GpTheothang" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GpQuadem" class="control-label"></label>
+                <input asp-for="GpQuadem" class="form-control" />
+                <span asp-validation-for="GpQuadem" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

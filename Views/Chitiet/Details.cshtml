@@ -1,0 +1,42 @@
+@model QLKhachSan.Models.Chitiet
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Chitiet</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CtGia)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CtGia)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.CtThanhtien)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.CtThanhtien)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DvMaNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DvMaNavigation.DvMa)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.HdMaNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.HdMaNavigation.HdMa)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.CtMa">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

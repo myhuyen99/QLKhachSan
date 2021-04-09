@@ -1,0 +1,53 @@
+@model IEnumerable<QLKhachSan.Models.Chitiet>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.CtGia)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CtThanhtien)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DvMaNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.HdMaNavigation)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CtGia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CtThanhtien)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DvMaNavigation.DvMa)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HdMaNavigation.HdMa)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.CtMa">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.CtMa">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.CtMa">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

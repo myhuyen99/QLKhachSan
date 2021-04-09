@@ -1,0 +1,53 @@
+@model IEnumerable<QLKhachSan.Models.Dichvu>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.DvTen)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DvGia)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DvSlnhap)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DvTonkho)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DvTen)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DvGia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DvSlnhap)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DvTonkho)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.DvMa">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.DvMa">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.DvMa">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

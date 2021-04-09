@@ -1,0 +1,36 @@
+@model QLKhachSan.Models.Trangbi
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Trangbi</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TbTen)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TbTen)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TbMota)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TbMota)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PMaNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PMaNavigation.PMa)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.TbMa">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

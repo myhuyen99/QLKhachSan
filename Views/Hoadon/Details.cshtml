@@ -1,0 +1,54 @@
+@model QLKhachSan.Models.Hoadon
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Hoadon</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.HdTgnhan)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.HdTgnhan)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.HdTgtra)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.HdTgtra)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.HdTongtien)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.HdTongtien)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.KhMaNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.KhMaNavigation.KhMa)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NvMaNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NvMaNavigation.NvMa)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PMaNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PMaNavigation.PMa)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.HdMa">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

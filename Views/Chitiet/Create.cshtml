@@ -1,0 +1,48 @@
+@model QLKhachSan.Models.Chitiet
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Chitiet</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="CtMa" class="control-label"></label>
+                <input asp-for="CtMa" class="form-control" />
+                <span asp-validation-for="CtMa" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CtGia" class="control-label"></label>
+                <input asp-for="CtGia" class="form-control" />
+                <span asp-validation-for="CtGia" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CtThanhtien" class="control-label"></label>
+                <input asp-for="CtThanhtien" class="form-control" />
+                <span asp-validation-for="CtThanhtien" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HdMa" class="control-label"></label>
+                <select asp-for="HdMa" class ="form-control" asp-items="ViewBag.HdMa"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="DvMa" class="control-label"></label>
+                <select asp-for="DvMa" class ="form-control" asp-items="ViewBag.DvMa"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

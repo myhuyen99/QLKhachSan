@@ -1,30 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\Asus\\Desktop\\QLKhachSan\\QLKhachSan.csproj": {}
+    "C:\\Users\\pc\\Desktop\\QLKhachSan\\QLKhachSan.csproj": {}
   },
   "projects": {
-    "c:\\Users\\Asus\\Desktop\\QLKhachSan\\QLKhachSan.csproj": {
+    "C:\\Users\\pc\\Desktop\\QLKhachSan\\QLKhachSan.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Asus\\Desktop\\QLKhachSan\\QLKhachSan.csproj",
+        "projectUniqueName": "C:\\Users\\pc\\Desktop\\QLKhachSan\\QLKhachSan.csproj",
         "projectName": "QLKhachSan",
-        "projectPath": "c:\\Users\\Asus\\Desktop\\QLKhachSan\\QLKhachSan.csproj",
-        "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Asus\\Desktop\\QLKhachSan\\obj\\",
+        "projectPath": "C:\\Users\\pc\\Desktop\\QLKhachSan\\QLKhachSan.csproj",
+        "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\pc\\Desktop\\QLKhachSan\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Asus\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

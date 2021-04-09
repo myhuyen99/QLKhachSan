@@ -1,0 +1,42 @@
+@model QLKhachSan.Models.Datphong
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Datphong</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DpTgnhan)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DpTgnhan)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DpTgtra)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DpTgtra)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.KhMaNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.KhMaNavigation.KhMa)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NvMaNavigation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NvMaNavigation.NvMa)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.DpMa">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

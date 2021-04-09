@@ -1,0 +1,42 @@
+@model QLKhachSan.Models.Dichvu
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Dichvu</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DvTen)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DvTen)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DvGia)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DvGia)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DvSlnhap)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DvSlnhap)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DvTonkho)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DvTonkho)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.DvMa">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

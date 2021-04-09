@@ -1,0 +1,42 @@
+@model QLKhachSan.Models.Giaphong
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Giaphong</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.GpTheongay)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.GpTheongay)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.GpTheotuan)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.GpTheotuan)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.GpTheothang)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.GpTheothang)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.GpQuadem)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.GpQuadem)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.GpMa">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
