@@ -4,43 +4,97 @@
     ViewData["Title"] = "Edit";
 }
 
-<h1>Edit</h1>
-
-<h4>Chitiet</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Edit">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="CtMa" />
-            <div class="form-group">
-                <label asp-for="CtGia" class="control-label"></label>
-                <input asp-for="CtGia" class="form-control" />
-                <span asp-validation-for="CtGia" class="text-danger"></span>
+<div class="all-content-wrapper">
+    <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="sparkline12-list">
+                            <div class="sparkline12-hd">
+                                <div class="main-sparkline12-hd">
+                                    <h1>SỬA CHI TIẾT</h1>
+                                </div>
+                            </div>
+                            <div class="sparkline12-graph">
+                                <div class="basic-login-form-ad">
+                                    <div class="row">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <div class="all-form-element-inner">
+                                                <form asp-action="Edit">
+                                                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                                    <input type="hidden" asp-for="CtMa" />
+                                                    <div class="form-group-inner">
+                                                        <div class="row">
+                                                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                                                <label asp-for="CtMa" class="login2 pull-right pull-right-pro">Mã Chi Tiết</label>
+                                                            </div>
+                                                            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                                                                <input asp-for="CtMa" type="text" class="form-control" />
+                                                            </div>
+                                                            <span asp-validation-for="CtMa" class="text-danger"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group-inner">
+                                                        <div class="row">
+                                                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                                                <label asp-for="CtGia" class="login2 pull-right pull-right-pro">Giá</label>
+                                                            </div>
+                                                            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                                                                <input asp-for="CtGia" type="text" class="form-control" />
+                                                                <span asp-validation-for="CtGia" class="text-danger"></span>
+                                                            </div>
+                                                            
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group-inner" >
+                                                        <div class="row">
+                                                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                                                <label asp-for="CtThanhtien" class="login2 pull-right pull-right-pro">Thành Tiền</label>
+                                                            </div>
+                                                            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                                                                <input asp-for="CtThanhtien" type="text" class="form-control" />
+                                                            </div>
+                                                            <span asp-validation-for="CtThanhtien" class="text-danger"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group-inner">
+                                                        <div class="row">
+                                                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"> 
+                                                                <label asp-for="HdMa" class="login2 pull-right pull-right-pro">Hóa Đơn</label>
+                                                            </div>
+                                                            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                                                                <select asp-for="HdMa" class ="form-control" asp-items="ViewBag.HdMa"></select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group-inner">
+                                                        <div class="row">
+                                                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                                                <label  asp-for="DvMa" class="login2 pull-right pull-right-pro">Dịch Vụ</label>
+                                                            </div>
+                                                            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                                                                <select asp-for="DvMa" class ="form-control" asp-items="ViewBag.DvMa"></select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group-inner">
+                                                        <div class="login-btn-inner">
+                                                            <div class="row">
+                                                                <div class="col-lg-3"></div>
+                                                                <div class="col-lg-9">
+                                                                    <div class="login-horizental cancel-wp pull-left">
+                                                                        <input class="btn btn-sm btn-primary login-submit-cs" type="submit" value="Lưu" class="btn btn-primary" />
+                                                                        <a asp-action="Index"><i class="fa fa-home adminpro-home-admin" aria-hidden="true"></i></a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="CtThanhtien" class="control-label"></label>
-                <input asp-for="CtThanhtien" class="form-control" />
-                <span asp-validation-for="CtThanhtien" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="HdMa" class="control-label"></label>
-                <select asp-for="HdMa" class="form-control" asp-items="ViewBag.HdMa"></select>
-                <span asp-validation-for="HdMa" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="DvMa" class="control-label"></label>
-                <select asp-for="DvMa" class="form-control" asp-items="ViewBag.DvMa"></select>
-                <span asp-validation-for="DvMa" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
-            </div>
-        </form>
-    </div>
-</div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
-

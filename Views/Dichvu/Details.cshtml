@@ -4,39 +4,55 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Details</h1>
-
-<div>
-    <h4>Dichvu</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.DvTen)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.DvTen)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.DvGia)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.DvGia)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.DvSlnhap)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.DvSlnhap)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.DvTonkho)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.DvTonkho)
-        </dd>
-    </dl>
-</div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model.DvMa">Edit</a> |
-    <a asp-action="Index">Back to List</a>
-</div>
+<div class="all-content-wrapper">
+    <div class="data-table-area mg-tb-15">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="sparkline13-list">
+                        <div class="sparkline13-graph">
+                            <div class="datatable-dashv1-list custom-datatable-overright">
+                                <h1>CHI TIẾT DỊCH VỤ</h1> 
+                                <table style = "margin-top:2%" id="table" data-toggle="table" data-pagination="true" data-search="true" data-show-columns="true" data-show-pagination-switch="true" data-show-refresh="true" data-key-events="true" data-show-toggle="true" data-resizable="true" data-cookie="true"
+                                data-cookie-id-table="saveId" data-show-export="true" data-click-to-select="true" data-toolbar="#toolbar">
+                                    <thead>
+                                        <tr>
+                                            <th data-field="id">Mã Dịch Vụ</th>
+                                            <th style="width:20%" data-field="name" data-editable="true">Tên Dịch Vụ</th>
+                                            <th style="width:20%" data-field="price" data-editable="true">Giá</th>
+											<th style="width:20%" data-field="text" data-editable="true">Số Lượng Nhập</th>
+											<th data-field="text" data-editable="true">Tồn Kho</th>
+                                            <th data-field="action"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                            <tr>
+                                                <td>
+                                                    @Html.DisplayFor(model => model.DvMa)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(model => model.DvTen)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(model => model.DvGia)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(model => model.DvSlnhap)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(model => model.DvTonkho)
+                                                </td>
+                                                <td>
+                                                    <a class="pd-setting-ed" asp-action="Edit" asp-route-id="@Model.DvMa"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a> |
+                                                    <a asp-action="Index"><i class="fa fa-home adminpro-home-admin" aria-hidden="true"></i></a>
+                                                </td>
+                                            </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

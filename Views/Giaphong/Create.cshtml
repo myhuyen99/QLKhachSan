@@ -48,3 +48,97 @@
     <a asp-action="Index">Back to List</a>
 </div>
 
+<div class="all-content-wrapper">
+    <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="sparkline12-list">
+                            <div class="sparkline12-hd">
+                                <div class="main-sparkline12-hd">
+                                    <h1>THÊM GIÁ PHÒNG</h1>
+                                </div>
+                            </div>
+                            <div class="sparkline12-graph">
+                                <div class="basic-login-form-ad">
+                                    <div class="row">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <div class="all-form-element-inner">
+                                                <form asp-action="Create">
+                                                    <div class="form-group-inner">
+                                                        <div class="row">
+                                                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                                                <label asp-for="GpMa" class="login2 pull-right pull-right-pro">Mã Giá Phòng</label>
+                                                            </div>
+                                                            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                                                                <input asp-for="GpMa" type="text" class="form-control" />
+                                                            </div>
+                                                            <span asp-validation-for="GpMa" class="text-danger"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group-inner">
+                                                        <div class="row">
+                                                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                                                <label asp-for="GpTheongay" class="login2 pull-right pull-right-pro">Giá Phòng Theo Ngày</label>
+                                                            </div>
+                                                            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                                                                <input asp-for="GpTheongay" type="text" class="form-control" />
+                                                                <span asp-validation-for="GpTheongay" class="text-danger"></span>
+                                                            </div>
+                                                            
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group-inner" >
+                                                        <div class="row">
+                                                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                                                <label asp-for="GpTheotuan" class="login2 pull-right pull-right-pro">Giá Phòng Theo Tuần</label>
+                                                            </div>
+                                                            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                                                                <input asp-for="GpTheotuan" type="text" class="form-control" />
+                                                            </div>
+                                                            <span asp-validation-for="GpTheotuan" class="text-danger"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group-inner">
+                                                        <div class="row">
+                                                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12"> 
+                                                                <label asp-for="GpTheothang" class="login2 pull-right pull-right-pro">Giá Phòng Theo Tháng</label>
+                                                            </div>
+                                                            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                                                                <input asp-for="GpTheothang" type="text" class="form-control" />
+                                                                <span asp-validation-for="GpTheothang" class="text-danger"></span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group-inner">
+                                                        <div class="row">
+                                                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                                                <label  asp-for="GpQuadem" class="login2 pull-right pull-right-pro">Giá Phòng Qua Đêm</label>
+                                                            </div>
+                                                            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                                                                <input  asp-for="GpQuadem" type="text" class="form-control" />
+                                                            </div>
+                                                            <span asp-validation-for="GpQuadem" class="text-danger"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group-inner">
+                                                        <div class="login-btn-inner">
+                                                            <div class="row">
+                                                                <div class="col-lg-3"></div>
+                                                                <div class="col-lg-9">
+                                                                    <div class="login-horizental cancel-wp pull-left">
+                                                                        <input class="btn btn-sm btn-primary login-submit-cs" type="submit" value="Thêm mới" class="btn btn-primary" />
+                                                                        <button class="btn btn-white" asp-action="Index"><i class="fa fa-home adminpro-home-admin" aria-hidden="true"></i></button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>

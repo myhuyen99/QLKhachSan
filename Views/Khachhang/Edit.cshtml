@@ -4,53 +4,120 @@
     ViewData["Title"] = "Edit";
 }
 
-<h1>Edit</h1>
-
-<h4>Khachhang</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Edit">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="KhMa" />
-            <div class="form-group">
-                <label asp-for="KhHoten" class="control-label"></label>
-                <input asp-for="KhHoten" class="form-control" />
-                <span asp-validation-for="KhHoten" class="text-danger"></span>
+<div class="all-content-wrapper">
+    <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="sparkline12-list">
+                            <div class="sparkline12-hd">
+                                <div class="main-sparkline12-hd">
+                                    <h1>SỬA KHÁCH HÀNG</h1>
+                                </div>
+                            </div>
+                            <div class="sparkline12-graph">
+                                <div class="basic-login-form-ad">
+                                    <div class="row">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <div class="all-form-element-inner">
+                                                <form asp-action="Edit">
+                                                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                                    <input type="hidden" asp-for="KhMa" />
+                                                    <div class="form-group-inner">
+                                                        <div class="row">
+                                                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                                                <label asp-for="KhMa" class="login2 pull-right pull-right-pro">Mã Khách Hàng</label>
+                                                            </div>
+                                                            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                                                                <input asp-for="KhMa" type="text" class="form-control" />
+                                                            </div>
+                                                            <span asp-validation-for="KhMa" class="text-danger"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group-inner">
+                                                        <div class="row">
+                                                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                                                <label asp-for="KhHoten" class="login2 pull-right pull-right-pro">Họ Tên</label>
+                                                            </div>
+                                                            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                                                                <input asp-for="KhHoten" type="text" class="form-control" />
+                                                            </div>
+                                                            <span asp-validation-for="KhHoten" class="text-danger"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group-inner">
+                                                        <div class="row">
+                                                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                                                <label asp-for="KhGioitinh" class="login2 pull-right pull-right-pro">Giới Tính</label>
+                                                            </div>
+                                                            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                                                                <input asp-for="KhGioitinh" type="text" class="form-control" />
+                                                            </div>
+                                                            <span asp-validation-for="KhGioitinh" class="text-danger"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group-inner">
+                                                        <div class="row">
+                                                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                                                <label asp-for="KhSdt" class="login2 pull-right pull-right-pro">Số Điện Thoại</label>
+                                                            </div>
+                                                            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                                                                <input asp-for="KhSdt" type="text" class="form-control" />
+                                                            </div>
+                                                            <span asp-validation-for="KhSdt" class="text-danger"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group-inner">
+                                                        <div class="row">
+                                                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                                                <label asp-for="KhDiachi" class="login2 pull-right pull-right-pro">Địa chỉ</label>
+                                                            </div>
+                                                            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                                                                <input asp-for="KhDiachi" type="text" class="form-control" />
+                                                            </div>
+                                                            <span asp-validation-for="KhDiachi" class="text-danger"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group-inner">
+                                                        <div class="row">
+                                                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                                                <label asp-for="KhCmnd" class="login2 pull-right pull-right-pro">CMND</label>
+                                                            </div>
+                                                            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                                                                <input asp-for="KhCmnd" type="text" class="form-control" />
+                                                            </div>
+                                                            <span asp-validation-for="KhCmnd" class="text-danger"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group-inner">
+                                                        <div class="row">
+                                                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                                                <label asp-for="KhEmail" class="login2 pull-right pull-right-pro">Email</label>
+                                                            </div>
+                                                            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                                                                <input asp-for="KhEmail" type="email" class="form-control" placeholder="Placeholder" />
+                                                            </div>
+                                                            <span asp-validation-for="KhEmail" class="text-danger"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group-inner">
+                                                        <div class="login-btn-inner">
+                                                            <div class="row">
+                                                                <div class="col-lg-3"></div>
+                                                                <div class="col-lg-9">
+                                                                    <div class="login-horizental cancel-wp pull-left">
+                                                                        <input class="btn btn-sm btn-primary login-submit-cs" type="submit" value="Lưu" class="btn btn-primary" />
+                                                                        <a asp-action="Index"><i class="fa fa-home adminpro-home-admin" aria-hidden="true"></i></a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="KhGioitinh" class="control-label"></label>
-                <input asp-for="KhGioitinh" class="form-control" />
-                <span asp-validation-for="KhGioitinh" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="KhSdt" class="control-label"></label>
-                <input asp-for="KhSdt" class="form-control" />
-                <span asp-validation-for="KhSdt" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="KhDiachi" class="control-label"></label>
-                <input asp-for="KhDiachi" class="form-control" />
-                <span asp-validation-for="KhDiachi" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="KhCmnd" class="control-label"></label>
-                <input asp-for="KhCmnd" class="form-control" />
-                <span asp-validation-for="KhCmnd" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="KhEmail" class="control-label"></label>
-                <input asp-for="KhEmail" class="form-control" />
-                <span asp-validation-for="KhEmail" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
-            </div>
-        </form>
-    </div>
-</div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
-

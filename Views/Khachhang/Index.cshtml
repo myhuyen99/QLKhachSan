@@ -4,62 +4,75 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
-
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.KhHoten)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.KhGioitinh)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.KhSdt)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.KhDiachi)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.KhCmnd)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.KhEmail)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.KhHoten)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.KhGioitinh)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.KhSdt)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.KhDiachi)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.KhCmnd)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.KhEmail)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.KhMa">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.KhMa">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.KhMa">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+<div class="all-content-wrapper">
+                <div class="data-table-area mg-tb-15">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-6">
+                                        <div class="sparkline13-list">
+                                            <div class="sparkline13-hd">
+                                                <div class="main-sparkline13-hd">
+                                                    <h1>KHÁCH HÀNG</h1>
+                                                    <div class="add-product">
+                                                        <a asp-action="Create">Thêm mới</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="sparkline13-graph">
+                                                <div class="datatable-dashv1-list custom-datatable-overright">
+                                                    <table id="table" data-toggle="table" data-pagination="true" data-search="true" data-show-columns="true" data-show-pagination-switch="true" data-show-refresh="true" data-key-events="true" data-show-toggle="true" data-resizable="true" data-cookie="true"
+                                                        data-cookie-id-table="saveId" data-show-export="true" data-click-to-select="true" data-toolbar="#toolbar">
+                                                        <thead>
+                                                            <tr>
+                                                                @* <th data-field="state" data-checkbox="true"></th> *@
+                                                                <th data-field="id">Mã KH</th>
+                                                                <th data-field="name" data-editable="true">Tên KH</th>
+                                                                <th data-field="company" data-editable="true">Giới Tính</th>
+                                                                <th data-field="price" data-editable="true">SĐT</th>
+                                                                <th data-field="date" data-editable="true">Địa Chỉ</th>
+                                                                <th data-field="task" data-editable="true">CMND</th>
+                                                                <th data-field="email" data-editable="true">EMAIL</th>
+                                                                <th data-field="action"></th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            @foreach (var item in Model) {
+                                                                <tr>
+                                                                    <td>
+                                                                        @Html.DisplayFor(modelItem => item.KhMa)
+                                                                    </td>
+                                                                    <td>
+                                                                        @Html.DisplayFor(modelItem => item.KhHoten)
+                                                                    </td>
+                                                                    <td>
+                                                                        @Html.DisplayFor(modelItem => item.KhGioitinh)
+                                                                    </td>
+                                                                    <td>
+                                                                        @Html.DisplayFor(modelItem => item.KhSdt)
+                                                                    </td>
+                                                                    <td>
+                                                                        @Html.DisplayFor(modelItem => item.KhDiachi)
+                                                                    </td>
+                                                                    <td>
+                                                                        @Html.DisplayFor(modelItem => item.KhCmnd)
+                                                                    </td>
+                                                                    <td>
+                                                                        @Html.DisplayFor(modelItem => item.KhEmail)
+                                                                    </td>
+                                                                    <td>
+                                                                        <a class="pd-setting-ed" asp-action="Edit" asp-route-id="@item.KhMa"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a> |
+                                                                        <a asp-action="Details" asp-route-id="@item.KhMa"><i class="fa fa-info-circle adminpro-informatio" aria-hidden="true"></i></a> |
+                                                                        <a class="pd-setting-ed" asp-action="Delete" asp-route-id="@item.KhMa"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+                                                                    </td>
+                                                                </tr>
+                                                            }
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>

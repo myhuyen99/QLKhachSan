@@ -4,50 +4,69 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
-
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.DpTgnhan)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DpTgtra)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.KhMaNavigation)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.NvMaNavigation)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.DpTgnhan)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DpTgtra)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.KhMaNavigation.KhMa)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.NvMaNavigation.NvMa)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.DpMa">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.DpMa">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.DpMa">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+<div class="all-content-wrapper">
+    <div class="data-table-area mg-tb-15">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="sparkline13-list">
+                            <h1>ĐẶT PHÒNG</h1>
+                        <div class="add-product">
+                            <a asp-action="Create">Thêm mới</a>
+                        </div>
+                        <div class="sparkline13-graph">
+                            <div class="datatable-dashv1-list custom-datatable-overright">
+                                @* <div id="toolbar">
+                                    <select class="form-control">
+										<option value="">Export Basic</option>
+										<option value="all">Export All</option>
+										<option value="selected">Export Selected</option>
+									</select>
+                                </div> *@
+                                <table id="table" data-toggle="table" data-pagination="true" data-search="true" data-show-columns="true" data-show-pagination-switch="true" data-show-refresh="true" data-key-events="true" data-show-toggle="true" data-resizable="true" data-cookie="true"
+                                data-cookie-id-table="saveId" data-show-export="true" data-click-to-select="true" data-toolbar="#toolbar">
+                                    <thead>
+                                        <tr>
+                                            <th style="width:20%" data-field="id">Mã Đặt Phòng</th>
+                                            <th style="width:25%" data-field="price" data-editable="true">Thời Gian Nhận</th>
+                                            <th style="width:25%" data-field="price" data-editable="true">Thời Gian Trả</th>
+											<th style="width:25%" data-field="text" data-editable="true">Khách Hàng</th>
+											<th style="width:25%" data-field="text" data-editable="true">Nhân Viên</th>
+                                            <th data-field="action"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in Model)
+                                        {
+                                            <tr>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.DpMa)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.DpTgnhan)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.DpTgtra)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.KhMaNavigation.KhMa)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.NvMaNavigation.NvMa)
+                                                </td>
+                                                <td>
+                                                    <a data-toggle="tooltip" class="pd-setting-ed" asp-action="Edit" asp-route-id="@item.DpMa"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a> |
+                                                    <a asp-action="Details" asp-route-id="@item.DpMa"><i class="fa fa-info-circle adminpro-informatio" aria-hidden="true"></i></a> |
+                                                    <a data-toggle="tooltip" class="pd-setting-ed" asp-action="Delete" asp-route-id="@item.DpMa"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

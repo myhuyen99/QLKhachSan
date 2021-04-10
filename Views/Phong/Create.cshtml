@@ -4,51 +4,107 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
-
-<h4>Phong</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="PMa" class="control-label"></label>
-                <input asp-for="PMa" class="form-control" />
-                <span asp-validation-for="PMa" class="text-danger"></span>
+<div class="all-content-wrapper">
+    <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="sparkline12-list">
+                            <div class="sparkline12-hd">
+                                <div class="main-sparkline12-hd">
+                                    <h1>THÊM PHÒNG</h1>
+                                </div>
+                            </div>
+                            <div class="sparkline12-graph">
+                                <div class="basic-login-form-ad">
+                                    <div class="row">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <div class="all-form-element-inner">
+                                                <form asp-action="Create">
+                                                    <div class="form-group-inner">
+                                                        <div class="row">
+                                                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                                                <label asp-for="PMa" class="login2 pull-right pull-right-pro">Mã Phòng</label>
+                                                            </div>
+                                                            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                                                                <input asp-for="PMa" type="text" class="form-control" />
+                                                            </div>
+                                                            <span asp-validation-for="PMa" class="text-danger"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group-inner">
+                                                        <div class="row">
+                                                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                                                <label asp-for="PTen" class="login2 pull-right pull-right-pro">Tên Phòng</label>
+                                                            </div>
+                                                            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                                                                <input asp-for="PTen" type="text" class="form-control" />
+                                                                <span asp-validation-for="PTen" class="text-danger"></span>
+                                                            </div>
+                                                            
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group-inner" >
+                                                        <div class="row">
+                                                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                                                <label asp-for="PSlgiuong" class="login2 pull-right pull-right-pro">Số Lượng Giường</label>
+                                                            </div>
+                                                            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                                                                <input asp-for="PSlgiuong" type="text" class="form-control" />
+                                                            </div>
+                                                            <span asp-validation-for="PSlgiuong" class="text-danger"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group-inner" >
+                                                        <div class="row">
+                                                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                                                <label asp-for="PMota" class="login2 pull-right pull-right-pro">Mô Tả</label>
+                                                            </div>
+                                                            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                                                                <input asp-for="PMota" type="text" class="form-control" />
+                                                            </div>
+                                                            <span asp-validation-for="PMota" class="text-danger"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group-inner" >
+                                                        <div class="row">
+                                                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                                                <label asp-for="PTrangthai" class="login2 pull-right pull-right-pro">Trạng Thái</label>
+                                                            </div>
+                                                            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                                                                <input asp-for="PTrangthai" type="text" class="form-control" />
+                                                            </div>
+                                                            <span asp-validation-for="PTrangthai" class="text-danger"></span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group-inner">
+                                                        <div class="row">
+                                                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                                                                <label  asp-for="LpMa" class="login2 pull-right pull-right-pro">Loại Phòng</label>
+                                                            </div>
+                                                            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                                                                <select asp-for="LpMa" class ="form-control" asp-items="ViewBag.LpMa"></select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group-inner">
+                                                        <div class="login-btn-inner">
+                                                            <div class="row">
+                                                                <div class="col-lg-3"></div>
+                                                                <div class="col-lg-9">
+                                                                    <div class="login-horizental cancel-wp pull-left">
+                                                                        <input class="btn btn-sm btn-primary login-submit-cs" type="submit" value="Thêm mới" class="btn btn-primary" />
+                                                                        <button class="btn btn-white" asp-action="Index"><i class="fa fa-home adminpro-home-admin" aria-hidden="true"></i></button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="form-group">
-                <label asp-for="PTen" class="control-label"></label>
-                <input asp-for="PTen" class="form-control" />
-                <span asp-validation-for="PTen" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="PSlgiuong" class="control-label"></label>
-                <input asp-for="PSlgiuong" class="form-control" />
-                <span asp-validation-for="PSlgiuong" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="PMota" class="control-label"></label>
-                <input asp-for="PMota" class="form-control" />
-                <span asp-validation-for="PMota" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="PTrangthai" class="control-label"></label>
-                <input asp-for="PTrangthai" class="form-control" />
-                <span asp-validation-for="PTrangthai" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="LpMa" class="control-label"></label>
-                <select asp-for="LpMa" class ="form-control" asp-items="ViewBag.LpMa"></select>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
-    </div>
-</div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
-

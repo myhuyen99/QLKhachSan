@@ -4,54 +4,63 @@
     ViewData["Title"] = "Delete";
 }
 
-<h1>Delete</h1>
-
-<h3>Are you sure you want to delete this?</h3>
-<div>
-    <h4>Hoadon</h4>
-    <hr />
-    <dl class="row">
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.HdTgnhan)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.HdTgnhan)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.HdTgtra)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.HdTgtra)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.HdTongtien)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.HdTongtien)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.KhMaNavigation)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.KhMaNavigation.KhMa)
-        </dd class>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.NvMaNavigation)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.NvMaNavigation.NvMa)
-        </dd class>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.PMaNavigation)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.PMaNavigation.PMa)
-        </dd class>
-    </dl>
-    
-    <form asp-action="Delete">
-        <input type="hidden" asp-for="HdMa" />
-        <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a asp-action="Index">Back to List</a>
-    </form>
-</div>
+<div class="all-content-wrapper">
+    <div class="data-table-area mg-tb-15">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="sparkline13-list">
+                        <div class="sparkline13-graph">
+                            <div class="datatable-dashv1-list custom-datatable-overright">
+                                <h1>XÓA HÓA ĐƠN</h1> 
+                                <table style = "margin-top:2%" id="table" data-toggle="table" data-pagination="true" data-search="true" data-show-columns="true" data-show-pagination-switch="true" data-show-refresh="true" data-key-events="true" data-show-toggle="true" data-resizable="true" data-cookie="true"
+                                data-cookie-id-table="saveId" data-show-export="true" data-click-to-select="true" data-toolbar="#toolbar">
+                                    <thead>
+                                        <tr>
+                                            <th style="width:20%" data-field="id">Mã Hóa Đơn</th>
+                                            <th style="width:25%" data-field="date" data-editable="true">Thời Gian Nhận</th>
+                                            <th style="width:25%" data-field="date" data-editable="true">Thời Gian Trả</th>
+											<th style="width:25%" data-field="price" data-editable="true">Tổng Tiền</th>
+											<th style="width:25%" data-field="text" data-editable="true">Khách Hàng</th>
+                                            <th style="width:25%" data-field="text" data-editable="true">Nhân Viên</th>
+											<th style="width:25%" data-field="text" data-editable="true">Phòng</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                            <tr>
+                                                <td>
+                                                    @Html.DisplayFor(model => model.HdMa)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(model => model.HdTgnhan)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(model => model.HdTgtra)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(model => model.HdTongtien)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(model => model.KhMaNavigation.KhMa)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(model => model.NvMaNavigation.NvMa)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(model => model.PMaNavigation.PMa)
+                                                </td>
+                                            </tr>
+                                    </tbody>
+                                </table>
+                                <form style = "margin-top:2%"asp-action="Delete">
+                                    <input type="hidden" asp-for="HdMa" />
+                                    <input type="submit" value="Delete" class="btn btn-danger" /> |
+                                    <a asp-action="Index"><i class="fa fa-home adminpro-home-admin" aria-hidden="true"></i></a>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

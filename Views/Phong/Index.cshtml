@@ -4,56 +4,73 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
-
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.PTen)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.PSlgiuong)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.PMota)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.PTrangthai)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.LpMaNavigation)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.PTen)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PSlgiuong)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PMota)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PTrangthai)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.LpMaNavigation.LpMa)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.PMa">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.PMa">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.PMa">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+<div class="all-content-wrapper">
+    <div class="data-table-area mg-tb-15">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="sparkline13-list">
+                            <h1>PHÒNG</h1>
+                        <div class="add-product">
+                            <a asp-action="Create">Thêm mới</a>
+                        </div>
+                        <div class="sparkline13-graph">
+                            <div class="datatable-dashv1-list custom-datatable-overright">
+                                @* <div id="toolbar">
+                                    <select class="form-control">
+										<option value="">Export Basic</option>
+										<option value="all">Export All</option>
+										<option value="selected">Export Selected</option>
+									</select>
+                                </div> *@
+                                <table id="table" data-toggle="table" data-pagination="true" data-search="true" data-show-columns="true" data-show-pagination-switch="true" data-show-refresh="true" data-key-events="true" data-show-toggle="true" data-resizable="true" data-cookie="true"
+                                data-cookie-id-table="saveId" data-show-export="true" data-click-to-select="true" data-toolbar="#toolbar">
+                                    <thead>
+                                        <tr>
+                                            <th style="width:20%" data-field="id">Mã Phòng</th>
+                                            <th style="width:25%" data-field="name" data-editable="true">Tên Phòng</th>
+                                            <th style="width:25%" data-field="text" data-editable="true">Số Lượng Giường</th>
+											<th style="width:25%" data-field="text" data-editable="true">Mô Tả</th>
+                                            <th style="width:25%" data-field="text" data-editable="true">Trạng Thái</th>
+											<th style="width:25%" data-field="text" data-editable="true">Loại Phòng</th>
+                                            <th data-field="action"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in Model)
+                                        {
+                                            <tr>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.PMa)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.PTen)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.PSlgiuong)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.PMota)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.PTrangthai)
+                                                </td>
+                                                <td>
+                                                    @Html.DisplayFor(modelItem => item.LpMaNavigation.LpMa)
+                                                </td>
+                                                <td>
+                                                    <a data-toggle="tooltip" class="pd-setting-ed" asp-action="Edit" asp-route-id="@item.PMa"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a> |
+                                                    <a asp-action="Details" asp-route-id="@item.PMa"><i class="fa fa-info-circle adminpro-informatio" aria-hidden="true"></i></a> |
+                                                    <a data-toggle="tooltip" class="pd-setting-ed" asp-action="Delete" asp-route-id="@item.PMa"><i class="fa fa-trash-o" aria-hidden="true"></i></a>
+                                                </td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
