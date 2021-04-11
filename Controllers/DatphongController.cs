@@ -41,11 +41,20 @@ namespace QLKhachSan.Controllers
         }
 
         // GET: Datphong/Create
-        public IActionResult Create()
+        public class CreateID
+            {
+                public static string CreateID_ByteText()
+                {
+                    string IDstring = DateTime.Now.ToString("MMddHHmmss");
+                    return IDstring;
+                }
+            }        public IActionResult Create()
         {
             ViewData["KhMa"] = new SelectList(_context.Khachhang, "KhMa", "KhMa");
             ViewData["NvMa"] = new SelectList(_context.Nhanvien, "NvMa", "NvMa");
-            return View();
+            Datphong dp = new Datphong();
+            dp.DpMa = CreateID.CreateID_ByteText();
+            return View(dp);
         }
 
         // POST: Datphong/Create

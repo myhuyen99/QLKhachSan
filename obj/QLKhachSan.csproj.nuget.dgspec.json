@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Asus\\Desktop\\QLKhachSan\\QLKhachSan.csproj": {}
+    "c:\\Users\\Asus\\Desktop\\QLKhachSan\\QLKhachSan.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Asus\\Desktop\\QLKhachSan\\QLKhachSan.csproj": {
+    "c:\\Users\\Asus\\Desktop\\QLKhachSan\\QLKhachSan.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Asus\\Desktop\\QLKhachSan\\QLKhachSan.csproj",
+        "projectUniqueName": "c:\\Users\\Asus\\Desktop\\QLKhachSan\\QLKhachSan.csproj",
         "projectName": "QLKhachSan",
-        "projectPath": "C:\\Users\\Asus\\Desktop\\QLKhachSan\\QLKhachSan.csproj",
+        "projectPath": "c:\\Users\\Asus\\Desktop\\QLKhachSan\\QLKhachSan.csproj",
         "packagesPath": "C:\\Users\\Asus\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Asus\\Desktop\\QLKhachSan\\obj\\",
+        "outputPath": "c:\\Users\\Asus\\Desktop\\QLKhachSan\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

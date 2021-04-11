@@ -40,10 +40,20 @@ namespace QLKhachSan.Controllers
         }
 
         // GET: Phong/Create
+        public class CreateID
+            {
+                public static string CreateID_ByteText()
+                {
+                    string IDstring = DateTime.Now.ToString("MMddHHmmss");
+                    return IDstring;
+                }
+            }
         public IActionResult Create()
         {
             ViewData["LpMa"] = new SelectList(_context.Loaiphong, "LpMa", "LpMa");
-            return View();
+            Phong p = new Phong();
+            p.PMa = CreateID.CreateID_ByteText();
+            return View(p);
         }
 
         // POST: Phong/Create

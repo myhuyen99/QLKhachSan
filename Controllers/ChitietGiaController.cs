@@ -19,7 +19,14 @@ namespace QLKhachSan.Controllers
             var qLKhachSanContext = _context.ChitietGia.Include(c => c.GpMaNavigation).Include(c => c.LpMaNavigation);
             return View(await qLKhachSanContext.ToListAsync());
         }
-
+        public class CreateID
+            {
+                public static string CreateID_ByteText()
+                {
+                    string IDstring = DateTime.Now.ToString("MMddHHmmss");
+                    return IDstring;
+                }
+            }
         // GET: ChitietGia/Details/5
         public async Task<IActionResult> Details(string id)
         {
@@ -45,7 +52,9 @@ namespace QLKhachSan.Controllers
         {
             ViewData["GpMa"] = new SelectList(_context.Giaphong, "GpMa", "GpMa");
             ViewData["LpMa"] = new SelectList(_context.Loaiphong, "LpMa", "LpMa");
-            return View();
+            ChitietGia ctg = new ChitietGia();
+            ctg.CtgMa = CreateID.CreateID_ByteText();
+            return View(ctg);
         }
 
         // POST: ChitietGia/Create

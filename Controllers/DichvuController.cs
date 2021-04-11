@@ -38,9 +38,19 @@ namespace QLKhachSan.Controllers
         }
 
         // GET: Dichvu/Create
+        public class CreateID
+    {
+        public static string CreateID_ByteText()
+        {
+            string IDstring = DateTime.Now.ToString("MMddHHmmss");
+            return IDstring;
+        }
+    }
         public IActionResult Create()
         {
-            return View();
+            Dichvu dv = new Dichvu();
+            dv.DvMa = CreateID.CreateID_ByteText();
+            return View(dv);
         }
 
         // POST: Dichvu/Create

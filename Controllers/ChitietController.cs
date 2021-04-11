@@ -39,13 +39,23 @@ namespace QLKhachSan.Controllers
 
             return View(chitiet);
         }
-
+        public class CreateID
+            {
+                public static string CreateID_ByteText()
+                {
+                    string IDstring = DateTime.Now.ToString("MMddHHmmss");
+                    return IDstring;
+                }
+            }
+    
         // GET: Chitiet/Create
         public IActionResult Create()
         {
             ViewData["DvMa"] = new SelectList(_context.Dichvu, "DvMa", "DvMa");
             ViewData["HdMa"] = new SelectList(_context.Hoadon, "HdMa", "HdMa");
-            return View();
+            Chitiet ct = new Chitiet();
+            ct.CtMa = CreateID.CreateID_ByteText();
+            return View(ct);
         }
 
         // POST: Chitiet/Create

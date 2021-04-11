@@ -42,12 +42,22 @@ namespace QLKhachSan.Controllers
         }
 
         // GET: Hoadon/Create
+        public class CreateID
+            {
+                public static string CreateID_ByteText()
+                {
+                    string IDstring = DateTime.Now.ToString("MMddHHmmss");
+                    return IDstring;
+                }
+            }
         public IActionResult Create()
         {
             ViewData["KhMa"] = new SelectList(_context.Khachhang, "KhMa", "KhMa");
             ViewData["NvMa"] = new SelectList(_context.Nhanvien, "NvMa", "NvMa");
             ViewData["PMa"] = new SelectList(_context.Phong, "PMa", "PMa");
-            return View();
+            Hoadon hd = new Hoadon();
+            hd.HdMa = CreateID.CreateID_ByteText();
+            return View(hd);
         }
 
         // POST: Hoadon/Create

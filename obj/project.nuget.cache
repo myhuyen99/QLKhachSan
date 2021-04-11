@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mbnCJVTlTVc8ZwkwI9A8sDkdn7+/klCKj/BHkbwaQix9l6RFrZPfY4v4eWyNqMstWRswz8CZ+ZZIImFQSqVu8A==",
+  "dgSpecHash": "/G+84oMRovM7xqrmFSt3+Q/v1DgLpJ1f55SYbqKNUqXSPhvIJ4weA+1cHSO1KTLEuVZq7kThbC/c2iKGVZp1kw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Asus\\Desktop\\QLKhachSan\\QLKhachSan.csproj",
+  "projectFilePath": "c:\\Users\\Asus\\Desktop\\QLKhachSan\\QLKhachSan.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Asus\\.nuget\\packages\\microsoft.aspnetcore.diagnostics.entityframeworkcore\\3.1.9\\microsoft.aspnetcore.diagnostics.entityframeworkcore.3.1.9.nupkg.sha512",
     "C:\\Users\\Asus\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",

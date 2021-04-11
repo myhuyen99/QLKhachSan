@@ -38,9 +38,19 @@ namespace QLKhachSan.Controllers
         }
 
         // GET: Loaiphong/Create
+        public class CreateID
+            {
+                public static string CreateID_ByteText()
+                {
+                    string IDstring = DateTime.Now.ToString("MMddHHmmss");
+                    return IDstring;
+                }
+            }
         public IActionResult Create()
         {
-            return View();
+            Loaiphong lp = new Loaiphong();
+            lp.LpMa = CreateID.CreateID_ByteText();
+            return View(lp);
         }
 
         // POST: Loaiphong/Create

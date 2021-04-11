@@ -38,9 +38,19 @@ namespace QLKhachSan.Controllers
         }
 
         // GET: Giaphong/Create
+        public class CreateID
+            {
+                public static string CreateID_ByteText()
+                {
+                    string IDstring = DateTime.Now.ToString("MMddHHmmss");
+                    return IDstring;
+                }
+            }
         public IActionResult Create()
         {
-            return View();
+            Giaphong gp = new Giaphong();
+            gp.GpMa = CreateID.CreateID_ByteText();
+            return View(gp);
         }
 
         // POST: Giaphong/Create

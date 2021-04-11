@@ -40,10 +40,20 @@ namespace QLKhachSan.Controllers
         }
 
         // GET: Trangbi/Create
+        public class CreateID
+            {
+                public static string CreateID_ByteText()
+                {
+                    string IDstring = DateTime.Now.ToString("MMddHHmmss");
+                    return IDstring;
+                }
+            }
         public IActionResult Create()
         {
             ViewData["PMa"] = new SelectList(_context.Phong, "PMa", "PMa");
-            return View();
+            Trangbi tb = new Trangbi();
+            tb.TbMa = CreateID.CreateID_ByteText();
+            return View(tb);
         }
 
         // POST: Trangbi/Create

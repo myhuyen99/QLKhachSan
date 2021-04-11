@@ -38,9 +38,19 @@ namespace QLKhachSan.Controllers
         }
 
         // GET: Khachhang/Create
+        public class CreateID
+            {
+                public static string CreateID_ByteText()
+                {
+                    string IDstring = DateTime.Now.ToString("MMddHHmmss");
+                    return IDstring;
+                }
+            }
         public IActionResult Create()
         {
-            return View();
+            Khachhang kh = new Khachhang();
+            kh.KhMa = CreateID.CreateID_ByteText();
+            return View(kh);
         }
 
         // POST: Khachhang/Create

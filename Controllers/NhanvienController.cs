@@ -38,8 +38,18 @@ namespace QLKhachSan.Controllers
         }
 
         // GET: Nhanvien/Create
+        public class CreateID
+            {
+                public static string CreateID_ByteText()
+                {
+                    string IDstring = DateTime.Now.ToString("MMddHHmmss");
+                    return IDstring;
+                }
+            }
         public IActionResult Create()
         {
+            Nhanvien nv = new Nhanvien();
+            nv.NvMa = CreateID.CreateID_ByteText();
             return View();
         }
 
