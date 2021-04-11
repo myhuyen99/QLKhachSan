@@ -11,12 +11,7 @@ namespace QLKhachSan.Controllers
 {
     public class PhongController : Controller
     {
-        private readonly QLKhachSanContext _context;
-
-        public PhongController(QLKhachSanContext context)
-        {
-            _context = context;
-        }
+        private readonly QLKhachSanContext _context = new QLKhachSanContext();
 
         // GET: Phong
         public async Task<IActionResult> Index()

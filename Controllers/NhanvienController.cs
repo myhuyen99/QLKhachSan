@@ -11,12 +11,7 @@ namespace QLKhachSan.Controllers
 {
     public class NhanvienController : Controller
     {
-        private readonly QLKhachSanContext _context;
-
-        public NhanvienController(QLKhachSanContext context)
-        {
-            _context = context;
-        }
+        private readonly QLKhachSanContext _context = new QLKhachSanContext();
 
         // GET: Nhanvien
         public async Task<IActionResult> Index()

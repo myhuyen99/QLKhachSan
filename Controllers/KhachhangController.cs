@@ -11,12 +11,7 @@ namespace QLKhachSan.Controllers
 {
     public class KhachhangController : Controller
     {
-        private readonly QLKhachSanContext _context;
-
-        public KhachhangController(QLKhachSanContext context)
-        {
-            _context = context;
-        }
+        private readonly QLKhachSanContext _context = new QLKhachSanContext();
 
         // GET: Khachhang
         public async Task<IActionResult> Index()

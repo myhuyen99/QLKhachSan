@@ -11,12 +11,7 @@ namespace QLKhachSan.Controllers
 {
     public class ChitietController : Controller
     {
-        private readonly QLKhachSanContext _context;
-
-        public ChitietController(QLKhachSanContext context)
-        {
-            _context = context;
-        }
+        private readonly QLKhachSanContext _context = new QLKhachSanContext();
 
         // GET: Chitiet
         public async Task<IActionResult> Index()

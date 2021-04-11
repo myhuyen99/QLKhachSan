@@ -11,12 +11,7 @@ namespace QLKhachSan.Controllers
 {
     public class DichvuController : Controller
     {
-        private readonly QLKhachSanContext _context;
-
-        public DichvuController(QLKhachSanContext context)
-        {
-            _context = context;
-        }
+        private readonly QLKhachSanContext _context = new QLKhachSanContext();
 
         // GET: Dichvu
         public async Task<IActionResult> Index()

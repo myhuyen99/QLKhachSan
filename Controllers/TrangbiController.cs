@@ -11,12 +11,7 @@ namespace QLKhachSan.Controllers
 {
     public class TrangbiController : Controller
     {
-        private readonly QLKhachSanContext _context;
-
-        public TrangbiController(QLKhachSanContext context)
-        {
-            _context = context;
-        }
+        private readonly QLKhachSanContext _context = new QLKhachSanContext();
 
         // GET: Trangbi
         public async Task<IActionResult> Index()

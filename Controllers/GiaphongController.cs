@@ -11,12 +11,7 @@ namespace QLKhachSan.Controllers
 {
     public class GiaphongController : Controller
     {
-        private readonly QLKhachSanContext _context;
-
-        public GiaphongController(QLKhachSanContext context)
-        {
-            _context = context;
-        }
+        private readonly QLKhachSanContext _context = new QLKhachSanContext();
 
         // GET: Giaphong
         public async Task<IActionResult> Index()

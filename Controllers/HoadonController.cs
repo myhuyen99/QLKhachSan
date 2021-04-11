@@ -11,12 +11,7 @@ namespace QLKhachSan.Controllers
 {
     public class HoadonController : Controller
     {
-        private readonly QLKhachSanContext _context;
-
-        public HoadonController(QLKhachSanContext context)
-        {
-            _context = context;
-        }
+        private readonly QLKhachSanContext _context = new QLKhachSanContext();
 
         // GET: Hoadon
         public async Task<IActionResult> Index()

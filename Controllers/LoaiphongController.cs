@@ -11,12 +11,7 @@ namespace QLKhachSan.Controllers
 {
     public class LoaiphongController : Controller
     {
-        private readonly QLKhachSanContext _context;
-
-        public LoaiphongController(QLKhachSanContext context)
-        {
-            _context = context;
-        }
+        private readonly QLKhachSanContext _context = new QLKhachSanContext();
 
         // GET: Loaiphong
         public async Task<IActionResult> Index()
