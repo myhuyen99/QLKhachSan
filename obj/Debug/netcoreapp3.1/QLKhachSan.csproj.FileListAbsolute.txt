@@ -447,3 +447,7 @@ C:\Users\Asus\Desktop\QLKhachSan\obj\Debug\netcoreapp3.1\Razor\Views\Trangbi\Del
 C:\Users\Asus\Desktop\QLKhachSan\obj\Debug\netcoreapp3.1\Razor\Views\Trangbi\Details.cshtml.g.cs
 C:\Users\Asus\Desktop\QLKhachSan\obj\Debug\netcoreapp3.1\Razor\Views\Trangbi\Edit.cshtml.g.cs
 C:\Users\Asus\Desktop\QLKhachSan\obj\Debug\netcoreapp3.1\Razor\Views\Trangbi\Index.cshtml.g.cs
+C:\Users\Asus\Desktop\QLKhachSan\obj\Debug\netcoreapp3.1\Razor\Views\Hoadon\Print.cshtml.g.cs
+C:\Users\Asus\Desktop\QLKhachSan\bin\Debug\netcoreapp3.1\dotnet-ef.dll
+C:\Users\Asus\Desktop\QLKhachSan\obj\Debug\netcoreapp3.1\Razor\Views\Nhanvien\Login.cshtml.g.cs
+C:\Users\Asus\Desktop\QLKhachSan\obj\Debug\netcoreapp3.1\Razor\Views\Phong\DetailsPhong.cshtml.g.cs

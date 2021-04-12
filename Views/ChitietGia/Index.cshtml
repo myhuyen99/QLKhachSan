@@ -30,8 +30,8 @@
                                             <th style="width:20%" data-field="id">Mã Chi Tiết Giá</th>
                                             <th style="width:25%" data-field="price" data-editable="true">Áp Dụng Từ Ngày</th>
                                             <th style="width:25%" data-field="price" data-editable="true">Áp Dụng Tới Ngày</th>
-											<th style="width:25%" data-field="text" data-editable="true">Loại Phòng</th>
-											<th style="width:25%" data-field="text" data-editable="true">Giá Phòng</th>
+											<th style="width:25%" data-editable="true">Loại Phòng</th>
+											<th style="width:25%" data-editable="true">Giá Phòng</th>
                                             <th data-field="action"></th>
                                         </tr>
                                     </thead>
@@ -52,7 +52,7 @@
                                                     @Html.DisplayFor(modelItem => item.GpMaNavigation.GpMa)
                                                 </td>
                                                 <td>
-                                                    @Html.DisplayFor(modelItem => item.LpMaNavigation.LpMa)
+                                                    @Html.DisplayFor(modelItem => item.LpMaNavigation.LpTenloai)
                                                 </td>
                                                 <td>
                                                     <a data-toggle="tooltip" class="pd-setting-ed" asp-action="Edit" asp-route-id="@item.CtgMa"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a> |

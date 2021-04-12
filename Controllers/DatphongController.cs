@@ -13,6 +13,15 @@ namespace QLKhachSan.Controllers
     {
         private readonly QLKhachSanContext _context = new QLKhachSanContext();
 
+        [HttpGet]
+        public ActionResult MyAction(string search)
+        {
+        //do whatever you need with the parameter, 
+        //like using it as parameter in Linq to Entities or Linq to Sql, etc. 
+        //Suppose your search result will be put in variable "result".
+        ViewData["KhMa"] = search;
+        return View();
+        }
         // GET: Datphong
         public async Task<IActionResult> Index()
         {
@@ -48,10 +57,11 @@ namespace QLKhachSan.Controllers
                     string IDstring = DateTime.Now.ToString("MMddHHmmss");
                     return IDstring;
                 }
-            }        public IActionResult Create()
+            }        
+        public IActionResult Create()
         {
-            ViewData["KhMa"] = new SelectList(_context.Khachhang, "KhMa", "KhMa");
-            ViewData["NvMa"] = new SelectList(_context.Nhanvien, "NvMa", "NvMa");
+            ViewData["KhMa"] = new SelectList(_context.Khachhang, "KhMa", "KhHoten");
+            ViewData["NvMa"] = new SelectList(_context.Nhanvien, "NvMa", "NvTendn");
             Datphong dp = new Datphong();
             dp.DpMa = CreateID.CreateID_ByteText();
             return View(dp);
@@ -71,7 +81,7 @@ namespace QLKhachSan.Controllers
                 return RedirectToAction(nameof(Index));
             }
             ViewData["KhMa"] = new SelectList(_context.Khachhang, "KhMa", "KhMa", datphong.KhMa);
-            ViewData["NvMa"] = new SelectList(_context.Nhanvien, "NvMa", "NvMa", datphong.NvMa);
+            ViewData["NvMa"] = new SelectList(_context.Nhanvien, "NvMa", "KhMa", datphong.NvMa);
             return View(datphong);
         }
 
@@ -88,8 +98,8 @@ namespace QLKhachSan.Controllers
             {
                 return NotFound();
             }
-            ViewData["KhMa"] = new SelectList(_context.Khachhang, "KhMa", "KhMa", datphong.KhMa);
-            ViewData["NvMa"] = new SelectList(_context.Nhanvien, "NvMa", "NvMa", datphong.NvMa);
+            ViewData["KhMa"] = new SelectList(_context.Khachhang, "KhMa", "KhHoten", datphong.KhMa);
+            ViewData["NvMa"] = new SelectList(_context.Nhanvien, "NvMa", "NvTendn", datphong.NvMa);
             return View(datphong);
         }
 

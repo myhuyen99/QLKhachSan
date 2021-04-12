@@ -12,7 +12,32 @@ namespace QLKhachSan.Controllers
     public class NhanvienController : Controller
     {
         private readonly QLKhachSanContext _context = new QLKhachSanContext();
-
+// private bool IsAuthenticated(string UserName, string PassWord)
+//         {
+//             return (UserName == "nhan9961" && PassWord == "12345");
+//         }
+        public IActionResult Login()
+                {
+                    return View();
+                }
+        public ActionResult Validate(Nhanvien nv)
+        {
+            var acomptec_qlthptContext = _context.Nhanvien.Where(s => s.NvTendn == nv.NvTendn);
+            if(acomptec_qlthptContext.Any()){
+                if(acomptec_qlthptContext.Where(s => s.NvMatkhau == nv.NvMatkhau).Any()){
+                    
+                    return Json(new { status = true, message = "Login Successfull!"});
+                }
+                else
+                {
+                    return Json(new { status = false, message = "Invalid Password!"});
+                }
+            }
+            else
+            {
+                return Json(new { status = false, message = "Invalid Email!"});
+            }
+        }
         // GET: Nhanvien
         public async Task<IActionResult> Index()
         {
@@ -50,7 +75,7 @@ namespace QLKhachSan.Controllers
         {
             Nhanvien nv = new Nhanvien();
             nv.NvMa = CreateID.CreateID_ByteText();
-            return View();
+            return View(nv);
         }
 
         // POST: Nhanvien/Create

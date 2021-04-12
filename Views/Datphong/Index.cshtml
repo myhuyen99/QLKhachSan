@@ -30,8 +30,8 @@
                                             <th style="width:20%" data-field="id">Mã Đặt Phòng</th>
                                             <th style="width:25%" data-field="price" data-editable="true">Thời Gian Nhận</th>
                                             <th style="width:25%" data-field="price" data-editable="true">Thời Gian Trả</th>
-											<th style="width:25%" data-field="text" data-editable="true">Khách Hàng</th>
-											<th style="width:25%" data-field="text" data-editable="true">Nhân Viên</th>
+											<th style="width:25%" data-editable="true">Khách Hàng</th>
+											<th style="width:25%" data-editable="true">Nhân Viên</th>
                                             <th data-field="action"></th>
                                         </tr>
                                     </thead>
@@ -49,10 +49,10 @@
                                                     @Html.DisplayFor(modelItem => item.DpTgtra)
                                                 </td>
                                                 <td>
-                                                    @Html.DisplayFor(modelItem => item.KhMaNavigation.KhMa)
+                                                    @Html.DisplayFor(modelItem => item.KhMaNavigation.KhHoten)
                                                 </td>
                                                 <td>
-                                                    @Html.DisplayFor(modelItem => item.NvMaNavigation.NvMa)
+                                                    @Html.DisplayFor(modelItem => item.NvMaNavigation.NvTendn)
                                                 </td>
                                                 <td>
                                                     <a data-toggle="tooltip" class="pd-setting-ed" asp-action="Edit" asp-route-id="@item.DpMa"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a> |
@@ -68,5 +68,6 @@
                     </div>
                 </div>
             </div>
+            
         </div>
     </div>

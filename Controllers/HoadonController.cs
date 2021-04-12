@@ -40,7 +40,19 @@ namespace QLKhachSan.Controllers
 
             return View(hoadon);
         }
+        public async Task<IActionResult> Print (string id) {
+                    if (id == null) {
+                        return NotFound ();
+                    }
 
+                    var hoadon = await _context.Hoadon
+                        .FirstOrDefaultAsync (m => m.HdMa == id);
+                    if (hoadon == null) {
+                        return NotFound ();
+                    }
+
+                    return View (hoadon);
+                }
         // GET: Hoadon/Create
         public class CreateID
             {
@@ -52,9 +64,9 @@ namespace QLKhachSan.Controllers
             }
         public IActionResult Create()
         {
-            ViewData["KhMa"] = new SelectList(_context.Khachhang, "KhMa", "KhMa");
-            ViewData["NvMa"] = new SelectList(_context.Nhanvien, "NvMa", "NvMa");
-            ViewData["PMa"] = new SelectList(_context.Phong, "PMa", "PMa");
+            ViewData["KhMa"] = new SelectList(_context.Khachhang, "KhMa", "KhHoten");
+            ViewData["NvMa"] = new SelectList(_context.Nhanvien, "NvMa", "NvTendn");
+            ViewData["PMa"] = new SelectList(_context.Phong, "PMa", "PTen");
             Hoadon hd = new Hoadon();
             hd.HdMa = CreateID.CreateID_ByteText();
             return View(hd);

@@ -14577,6 +14577,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\Asus\\Desktop\\QLKhachSan\\Views\\Phong\\DetailsPhong.cshtml",
+      "TargetPath": "Views\\Phong\\DetailsPhong.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\Asus\\Desktop\\QLKhachSan\\Views\\Hoadon\\Edit.cshtml",
       "TargetPath": "Views\\Hoadon\\Edit.cshtml",
       "FileKind": "mvc"
@@ -14614,6 +14619,11 @@
     {
       "FilePath": "c:\\Users\\Asus\\Desktop\\QLKhachSan\\Views\\Hoadon\\Create.cshtml",
       "TargetPath": "Views\\Hoadon\\Create.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Asus\\Desktop\\QLKhachSan\\Views\\Hoadon\\Print.cshtml",
+      "TargetPath": "Views\\Hoadon\\Print.cshtml",
       "FileKind": "mvc"
     },
     {
@@ -14669,6 +14679,11 @@
     {
       "FilePath": "c:\\Users\\Asus\\Desktop\\QLKhachSan\\Views\\Trangbi\\Edit.cshtml",
       "TargetPath": "Views\\Trangbi\\Edit.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Asus\\Desktop\\QLKhachSan\\Views\\Nhanvien\\Login.cshtml",
+      "TargetPath": "Views\\Nhanvien\\Login.cshtml",
       "FileKind": "mvc"
     },
     {

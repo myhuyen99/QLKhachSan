@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using QLKhachSan.Models;
 
+
 namespace QLKhachSan.Controllers
 {
     public class HomeController : Controller
@@ -33,5 +34,6 @@ namespace QLKhachSan.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
     }
 }

@@ -1,0 +1,46 @@
+@model IEnumerable<QLKhachSan.Models.Phong>
+
+@{
+    ViewData["Title"] = "DetailsPhong";
+}
+
+<div class="all-content-wrapper">
+    <div class="product-new-list-area">
+                <div class="container-fluid">
+                    <div class="row">
+                        @foreach (var item in Model){ 
+                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                            <div class="single-new-trend mg-t-30">
+                                <a href="#"><img src="img/new-product/5.jpg" alt=""></a>
+                                <div class="overlay-content">
+                                    <a href="#">
+                                        <h2>@Html.DisplayFor(modelItem => item.PMa)</h2>
+                                    </a>
+                                     <a href="#" class="btn-small"></a> 
+                                    <div class="product-action">
+                                        <ul>
+                                            <li>
+                                                <a data-toggle="tooltip" title="Shopping" href="#"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
+                                            </li>
+                                            <li>
+                                                <a data-toggle="tooltip" title="Quick view" href="#"><i class="fa fa-heart" aria-hidden="true"></i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <a href="#">
+                                        <h4>@Html.DisplayFor(modelItem => item.PTen)</h4>
+                                    </a>
+                                    <div class="pro-rating">
+                                        <i class="fa fa-star color"></i>
+                                        <i class="fa fa-star color"></i>
+                                        <i class="fa fa-star color"></i>
+                                        <i class="fa fa-star color"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                     } 
+                    </div>
+                </div>
+            </div>

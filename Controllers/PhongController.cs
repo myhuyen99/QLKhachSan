@@ -13,6 +13,11 @@ namespace QLKhachSan.Controllers
     {
         private readonly QLKhachSanContext _context = new QLKhachSanContext();
 
+        public async Task<IActionResult> DetailsPhong()
+                {
+                    var qLKhachSanContext = _context.Phong.Include(p => p.LpMaNavigation);
+                    return View(await qLKhachSanContext.ToListAsync());
+                }
         // GET: Phong
         public async Task<IActionResult> Index()
         {
@@ -50,7 +55,7 @@ namespace QLKhachSan.Controllers
             }
         public IActionResult Create()
         {
-            ViewData["LpMa"] = new SelectList(_context.Loaiphong, "LpMa", "LpMa");
+            ViewData["LpMa"] = new SelectList(_context.Loaiphong, "LpMa", "LpTenloai");
             Phong p = new Phong();
             p.PMa = CreateID.CreateID_ByteText();
             return View(p);

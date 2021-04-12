@@ -1,0 +1,27 @@
+model QLKhachSan.Models.Hoadon
+
+@{
+    ViewData["Title"] = "Print";
+    Layout = null;
+}
+<body onload="window.print()">
+        <div class="pdf-viewer-area mg-tb-15">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                    </div>
+                    <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
+                        <div class="pdf-single-pro">
+                            <a class="media" href="pdf/mamunur.pdf"></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+                        <p>Mã cán bộ: @Model.HdMa | Họ và tên: @Model.HdTgnhan</p>
+                        <p>Giới tính: @Model.HdTgtra</p>
+                        <p>Địa chỉ: @Model.HdTongtien</p>
+                        <p>CMND: @Model.KhMa</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
